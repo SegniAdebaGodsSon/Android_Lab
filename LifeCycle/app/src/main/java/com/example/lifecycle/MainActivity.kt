@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val buttonOne = findViewById<Button>(R.id.buttonOne)
         buttonOne.setOnClickListener{
 //            Toast.makeText(this, "hello world", Toast.LENGTH_LONG).show()
-            val i = Intent(this, MainActivity2::class.java)
+            val i = Intent(applicationContext, MainActivity2::class.java)  // explicit intent ... applicationContext or 'this'
             // how to send info to another activity
             i.putExtra("user", "Segni")
             i.putExtra("age", 22)
